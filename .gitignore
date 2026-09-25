@@ -1,0 +1,20 @@
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Datos descargados y resultados de entrenamiento (se descargan desde el notebook)
+data/
+datos/
+*.pt
+*.pth
+*.ckpt
+
+# Soluciones de referencia y conjuntos de prueba ocultos: nunca en el repositorio público
+**/soluciones/
+**/test_oculto/
+
+# Sistema
+.DS_Store
