@@ -55,7 +55,7 @@ Este curso funciona si tú haces el trabajo. El profesor guía, pero no va a res
 ## Reglas de los trabajos
 
 - **Todo trabajo es un notebook de Colab que se ejecuta de principio a fin** en un entorno nuevo. Si no se ejecuta, no cuenta como entregado.
-- **Todo trabajo se guarda en tu repositorio privado del trabajo**, que recibes por GitHub Classroom. No hay que enviar nada: cuenta la última versión guardada antes del inicio de la clase. El paso a paso está en la sección [Antes de empezar: GitHub](README.md#antes-de-empezar-github) del README.
+- **Todo trabajo se guarda en tu repositorio privado de entregas** (`Alto-Rendimiento-IA/entregas-<tu-usuario>`), en la carpeta del trabajo. No hay que enviar nada: al inicio de la clase el profesor copia todos los repositorios, y lo que esté en el tuyo en ese momento es tu entrega. El paso a paso está en la sección [Antes de empezar: GitHub](README.md#antes-de-empezar-github) del README.
 - **Todo notebook termina con un párrafo** en lenguaje sencillo: qué significan los resultados y qué probarías después. Sin ese párrafo, no hay nota.
 - **Los resultados se comparan con una línea base.** Un 90% de accuracy no dice nada si no sabemos cuánto logra un modelo simple.
 - **Los sprints y el simulacro son individuales.** No se habla con otros ni se usa ayuda externa durante el tiempo cronometrado.
@@ -82,7 +82,7 @@ Cada notebook se evalúa con cuatro criterios, de 0 a 2 puntos cada uno: **se ej
 
 - [ ] Crear una cuenta en [ioai.artix.tech](https://ioai.artix.tech/) y leer la [guía de la plataforma](https://ioai.artix.tech/guide) (5 minutos).
 - [ ] Tener una cuenta de Google y abrir un notebook en [Google Colab](https://colab.research.google.com/) para comprobar que funciona.
-- [ ] Crear una cuenta en [GitHub](https://github.com/), enviarle tu usuario al profesor y conectar Colab con GitHub. Instrucciones en [Antes de empezar: GitHub](README.md#antes-de-empezar-github).
+- [ ] Crear una cuenta en [GitHub](https://github.com/), enviarle tu usuario al profesor, aceptar la invitación a tu repositorio de entregas cuando llegue y conectar Colab con GitHub. Instrucciones en [Antes de empezar: GitHub](README.md#antes-de-empezar-github).
 - [ ] Traer una computadora portátil a cada clase, si es posible.
 - [ ] No hacer todavía el test de nivel: lo hacemos juntos en la primera clase.
 
