@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Course repository for training high-school students toward IOAI 2027 (Singapore, 4–10 July 2027). Two levels, one weekly 2 h class each, all work done in Google Colab notebooks. Students fork this **public** repo, open notebooks in Colab from their fork, and save their solutions back to it (workflow: README.md, section "Antes de empezar: GitHub").
+Course repository for training high-school students toward IOAI 2027 (Singapore, 4–10 July 2027). Two levels, one weekly 2 h class each, all work done in Google Colab notebooks. This **public** repo holds the schedule, class notebooks and homework statements. Students hand in homework through **GitHub Classroom** in the org `Alto-Rendimiento-IA`, where each student gets a private repo per assignment (workflow: README.md, section "Antes de empezar: GitHub").
 
 ## Sources of truth
 
@@ -25,7 +25,7 @@ Nivel_<Inicial|Intermedio>/
   README.md                        # index: add a row for every notebook you create
 ```
 
-File names are snake_case ASCII: no accents, no `ñ`, no spaces, because they end up in Colab and GitHub URLs. Students save their copy as `<codigo>_<tema>_<usuario>.ipynb` next to the statement, so never create files with that suffix pattern.
+File names are snake_case ASCII: no accents, no `ñ`, no spaces, because they end up in Colab and GitHub URLs.
 
 ## Writing a notebook
 
@@ -38,7 +38,7 @@ File names are snake_case ASCII: no accents, no `ñ`, no spaces, because they en
 ## Every notebook
 
 - **Spanish** for all prose, comments, and plot labels. Code identifiers are in English, following PyTorch/sklearn conventions. The first time a technical term appears, give it in English in italics with a Spanish gloss (*broadcasting*, *accuracy*), as README does. Datasets, APIs, and competition problems stay in English: that friction is part of the training.
-- **Header cell** with: title, level, week number, session type, 3–4 learning objectives, prerequisites, estimated time, compute needs (CPU / GPU T4), and an "Abrir en Colab" badge pointing to `https://colab.research.google.com/github/melvinpqbsc/Alto_Rendiento_IA/blob/main/<path>`.
+- **Header cell** with: title, level, week number, session type, 3–4 learning objectives, prerequisites, estimated time, compute needs (CPU / GPU T4), and (class notebooks only, see Homework) an "Abrir en Colab" badge pointing to `https://colab.research.google.com/github/melvinpqbsc/Alto_Rendiento_IA/blob/main/<path>`.
 - **Fresh-runtime reproducible**: the first code cell holds the `%pip install -q` lines (see Environment), all imports, and a fixed seed. Data comes from torchvision / sklearn / Hugging Face datasets or a stable public URL, with no Drive mounting and no local paths. Size datasets and training so they fit in free Colab: minutes, not hours, unless the README row says otherwise (for example, the 15 min GPU budgets).
 - **Baseline first**: every modelling result is compared against a simple baseline (majority class, linear model, TF-IDF + logistic regression, …).
 
@@ -47,10 +47,13 @@ File names are snake_case ASCII: no accents, no `ñ`, no spaces, because they en
 - **[A] lecture**: teacher-driven. Short explanation cells alternate with live demos. Build ideas from scratch in NumPy before showing the library call. End sections with short "Tu turno" exercises.
 - **[B] lab**: mostly exercises in increasing difficulty, each with a check cell so students can see their own progress while the teacher circulates.
 - **[C] seminar**: the students present, so write a scaffold for the presenter: topic outline, the key figure/demo to build, 3 references, and 3 discussion questions for the audience.
-- **[D] sprint**: problem statement, data loading, a working baseline, the submission format, and a local validation split. The hidden test set lives only in `test_oculto/` (gitignored). Any public commit of it leaks the answers.
+- **[D] sprint**: problem statement, data loading, a working baseline, the submission format, and a local validation split. Delivered like homework, through a Classroom assignment. The hidden test set lives only in `test_oculto/` (gitignored). Any public commit of it leaks the answers.
 
 ## Homework (`tareas/`)
 
 - The notebook is a **statement**, never a solution. It holds context and a goal, numbered tasks, `# TODO` cells, and `assert`-based check cells wherever correctness is checkable (shapes, values against a library reference such as micrograd vs `torch.autograd`, attention vs `nn.MultiheadAttention`).
-- Reference solutions go to `<nivel>/soluciones/` (gitignored). The repo is public and forked by every student, so a solution that gets committed has already leaked.
+- Reference solutions go to `<nivel>/soluciones/` (gitignored). The repo is public, so a solution that gets committed has already leaked.
+- **Classroom delivery.** The statement in `tareas/` is the source of truth. Each homework, sprint and the project also needs a Classroom starter repo: a private template repo `Alto-Rendimiento-IA/plantilla-<codigo>-<tema>` holding only the statement notebook and any small data files. `gh` isn't installed, so prepare the template's contents and tell the user what to create in the web UI. The user makes the Classroom assignment itself (individual, or group of 2 for the project).
+- The homework header has no Colab badge: the badge would open the public statement, and saving from it goes to the wrong place. Instead the header tells students to accept the invitation and open the notebook from their `Alto-Rendimiento-IA/<trabajo>-<usuario>` repo.
+- Peer review happens outside the private repos: students share a Drive copy of the notebook with their reviewer. Write the rubric cell so a reviewer can fill it in as a comment.
 - It ends with three fixed cells: **Conclusión** (the student's plain-language paragraph: what the numbers mean, what they'd try next; no paragraph, no grade), **Uso de IA** (one line: what they used AI for, if anything), and the **rubric**: runs / correct / justified / well communicated, 0–2 each, with space for the student's self-score.

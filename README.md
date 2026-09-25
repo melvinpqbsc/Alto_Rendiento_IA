@@ -7,7 +7,12 @@ Plataforma: [ioai.artix.tech](https://ioai.artix.tech/) · se desarrolla en para
 
 ## Antes de empezar: GitHub
 
-Todo el material del curso vive en este repositorio: **[github.com/melvinpqbsc/Alto_Rendiento_IA](https://github.com/melvinpqbsc/Alto_Rendiento_IA)**. Lo usarás para recibir los notebooks de clase y los enunciados de los trabajos, y para entregar tus soluciones. *Git* es el programa que guarda la historia de cambios de los archivos; *GitHub* es el sitio donde vive el repositorio en línea. Para este curso no necesitas instalar nada: todo se hace desde el navegador con GitHub y Google Colab.
+El curso usa dos lugares en GitHub:
+
+- **Este repositorio** ([github.com/melvinpqbsc/Alto_Rendiento_IA](https://github.com/melvinpqbsc/Alto_Rendiento_IA)), público: cronograma, guía del estudiante, notebooks de clase y enunciados de los trabajos. Lo lees y abres sus notebooks en Colab, pero no guardas nada en él.
+- **La organización del curso** ([github.com/Alto-Rendimiento-IA](https://github.com/Alto-Rendimiento-IA)), con *GitHub Classroom*: para cada trabajo práctico recibes un repositorio **privado** propio, que solo ven tú y el profesor. Ahí guardas y entregas tu trabajo.
+
+*Git* es el programa que guarda la historia de cambios de los archivos; *GitHub* es el sitio donde viven los repositorios en línea. Para este curso no necesitas instalar nada: todo se hace desde el navegador con GitHub y Google Colab.
 
 ### Organización del repositorio
 
@@ -19,7 +24,7 @@ Alto_Rendiento_IA/
 ├── verificar_entorno.ipynb    ← se ejecuta en la primera clase
 ├── Nivel_Inicial/
 │   ├── clases/                ← notebooks de cada clase
-│   └── tareas/                ← enunciados de los trabajos
+│   └── tareas/                ← enunciados de los trabajos (se reciben por GitHub Classroom)
 └── Nivel_Intermedio/
     ├── clases/
     └── tareas/
@@ -29,16 +34,22 @@ Trabaja solo en la carpeta de tu nivel.
 
 ### Configuración (una sola vez, antes de la primera clase)
 
-1. **Crea una cuenta** en [github.com](https://github.com/). Elige un nombre de usuario que puedas mostrar: aparece en todas tus entregas. Envíaselo al profesor.
-2. **Haz un *fork* del repositorio**: en la página del repositorio, botón **Fork** (arriba a la derecha) → **Create fork**. Se crea tu propia copia en `github.com/<tu-usuario>/Alto_Rendiento_IA`. Ahí es donde trabajas y guardas tus cambios; el repositorio del curso no lo modificas nunca.
-3. **Conecta Colab con GitHub**: en [Colab](https://colab.research.google.com/), *Archivo → Abrir notebook → GitHub*, y acepta la autorización que te pide.
+1. **Crea una cuenta** en [github.com](https://github.com/). Elige un nombre de usuario que puedas mostrar. Envíaselo al profesor.
+2. **Conecta Colab con GitHub**: en [Colab](https://colab.research.google.com/), *Archivo → Abrir notebook → GitHub*, marca **Incluir repositorios privados** y acepta la autorización. En la pantalla de autorización, junto a la organización **Alto-Rendimiento-IA**, pulsa **Request** (o **Grant**): sin eso Colab no ve tus repositorios de trabajos.
 
-### Flujo de cada semana
+### Clases
 
-1. **Actualiza tu fork.** En la página de tu fork, botón **Sync fork → Update branch**. Así recibes los notebooks nuevos que publicó el profesor.
-2. **Abre el notebook en Colab.** *Archivo → Abrir notebook → GitHub*, escribe `<tu-usuario>/Alto_Rendiento_IA` y elige el archivo. Atajo: en la dirección del archivo en GitHub, reemplaza `github.com` por `colab.research.google.com/github`.
-3. **Guarda tu trabajo en tu fork.** *Archivo → Guardar una copia en GitHub*, con tu repositorio `<tu-usuario>/Alto_Rendiento_IA`, la rama `main` y la misma carpeta del enunciado. **Agrega tu usuario al final del nombre** (`P01_autograd_desde_cero_<tu-usuario>.ipynb`): así las actualizaciones del profesor nunca chocan con tu archivo. Escribe un mensaje que diga qué hiciste ("ejercicio 3 resuelto"). Cada guardado es un *commit*: guarda seguido.
-4. **Entrega.** Envía el enlace del archivo en tu fork por el canal del curso. Cuenta como entregada la última versión guardada **antes del inicio de la clase**: GitHub registra la hora de cada *commit*.
+Cada notebook de clase tiene arriba un botón **Abrir en Colab**. También puedes abrirlos con *Archivo → Abrir notebook → GitHub* y el repositorio `melvinpqbsc/Alto_Rendiento_IA`. Si quieres conservar tus notas, *Archivo → Guardar una copia en Drive*.
+
+### Trabajos prácticos
+
+1. **Acepta la invitación.** Para cada trabajo el profesor comparte un enlace de GitHub Classroom. Al abrirlo (la primera vez, eliges tu nombre en la lista del curso) se crea tu repositorio privado, `Alto-Rendimiento-IA/<trabajo>-<tu-usuario>`, con el enunciado adentro.
+2. **Abre el notebook en Colab**: *Archivo → Abrir notebook → GitHub*, con **Incluir repositorios privados** marcado, y elige tu repositorio del trabajo.
+3. **Guarda en tu repositorio**: *Archivo → Guardar una copia en GitHub*, con tu repositorio del trabajo, la rama `main` y el mismo nombre de archivo. Escribe un mensaje que diga qué hiciste ("ejercicio 3 resuelto"). Cada guardado es un *commit*: guarda seguido.
+4. **Entrega.** No hay que enviar nada: cuenta la última versión guardada en tu repositorio **antes del inicio de la clase**. GitHub registra la hora de cada *commit*, y el profesor ve todos los repositorios.
+5. **Revisión entre compañeros.** Guarda también una copia en Drive (*Archivo → Guardar una copia en Drive*) y compártela con tu compañero revisor con permiso de comentar. Tu repositorio sigue siendo privado.
+
+Los sprints y el proyecto final (en parejas, con un repositorio compartido) también llegan como invitaciones de GitHub Classroom.
 
 ¿Quieres aprender más? El curso gratuito [Introduction to GitHub](https://github.com/skills/introduction-to-github) toma menos de una hora. Más adelante (proyecto final, en parejas) vale la pena aprender a usar `git` desde la terminal.
 
@@ -102,7 +113,7 @@ Objetivo: en 3 sesiones, asegurar que todos tengan exactamente las herramientas 
  
 | Sem | Semana del | Sesión | Tipo | Entrega al inicio de la clase |
 |---|---|---|---|---|
-| 1 | **5 oct** | **Inicio + diagnóstico.** Qué es la IOAI. Creación de cuentas (plataforma y GitHub, ver [Antes de empezar: GitHub](#antes-de-empezar-github)), fork del repositorio, test de nivel *en clase*, configuración de Colab. Notebook diagnóstico de 45 min (NumPy, una derivada, un ajuste con sklearn) para confirmar quién va en cada nivel. | [A] | — |
+| 1 | **5 oct** | **Inicio + diagnóstico.** Qué es la IOAI. Creación de cuentas (plataforma y GitHub, ver [Antes de empezar: GitHub](#antes-de-empezar-github)), primera invitación de GitHub Classroom, test de nivel *en clase*, configuración de Colab. Notebook diagnóstico de 45 min (NumPy, una derivada, un ajuste con sklearn) para confirmar quién va en cada nivel. | [A] | — |
 | — | 12 oct | *Feriado. Asincrónico: pregunta del día, racha de 5 días.* | — | — |
 | 2 | 19 oct | **Python y NumPy para tensores + álgebra lineal**: formas (*shapes*), indexación, *broadcasting*, vectorización, `reshape`/`axis` (el modelo mental que PyTorch reutiliza en todo); vectores, producto punto, matriz × vector como "una capa". | [A] | Test de nivel hecho, niveles de Python superados |
 | 3 | 26 oct | **Cálculo y probabilidad para DL**: derivadas, regla de la cadena, gradiente; descenso de gradiente a mano; probabilidad → softmax → logaritmo → entropía cruzada. | [A] | **B1: Ejercicios de NumPy** (vectorizar 6 funciones con bucles, reportar la aceleración) |
