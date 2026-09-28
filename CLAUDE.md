@@ -25,7 +25,7 @@ Nivel_<Inicial|Intermedio>/
   README.md                        # index: add a row for every notebook you create
 ```
 
-`herramientas/` holds the teacher's stdlib-only scripts (repo creation, deadline snapshots). The student list and snapshots are gitignored because they hold personal data. They must never be committed, and neither must any other file with student data (form exports, grades).
+`herramientas/` holds the teacher's stdlib-only scripts (emails to students, repo creation, deadline snapshots). Email templates live in `herramientas/plantillas/`. Every `herramientas/*.csv` except `*.ejemplo.csv`, and the snapshots, are gitignored because they hold personal data. They must never be committed, and neither must any other file with student data (form exports, grades).
 
 File names are snake_case ASCII: no accents, no `ñ`, no spaces, because they end up in Colab and GitHub URLs.
 

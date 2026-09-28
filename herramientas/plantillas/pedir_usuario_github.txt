@@ -1,0 +1,15 @@
+Asunto: Curso de IA: necesito tu usuario de GitHub
+
+Hola, {nombre}:
+
+Durante el curso vas a entregar tus trabajos en un repositorio privado de GitHub que voy a crear para ti. Para eso necesito tu nombre de usuario de GitHub.
+
+1. Si todavía no tienes cuenta, créala en https://github.com/signup (es gratis). Elige un nombre de usuario que puedas mostrar: lo verán tus compañeros y el profesor.
+2. Responde a este correo solo con tu nombre de usuario (por ejemplo: ana-perez). Es el que aparece en la dirección github.com/<usuario>, no tu correo.
+
+Por favor, responde antes del {fecha_limite}. Poco después te llegará una invitación a tu repositorio de entregas, Alto-Rendimiento-IA/entregas-<tu-usuario>: acéptala antes de 7 días, porque después caduca.
+
+Las instrucciones completas están en https://github.com/melvinpqbsc/Alto_Rendiento_IA#antes-de-empezar-github
+
+Saludos,
+Melvin Poveda

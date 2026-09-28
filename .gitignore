@@ -20,6 +20,6 @@ datos/
 .DS_Store
 
 # Datos de estudiantes y entregas recolectadas (datos personales): solo en la computadora del profesor
-herramientas/estudiantes.csv
-herramientas/parejas.csv
+herramientas/*.csv
+!herramientas/*.ejemplo.csv
 herramientas/recolecciones/

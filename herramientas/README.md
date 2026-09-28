@@ -14,6 +14,31 @@ Cada estudiante tiene un repositorio **privado** de entregas en la organización
 
 4. **Lista de estudiantes**: copia `estudiantes.ejemplo.csv` como `estudiantes.csv` y complétala (`usuario,nombre,nivel`). `estudiantes.csv`, `parejas.csv` y `recolecciones/` están en `.gitignore`: tienen datos personales y no deben subirse al repositorio público.
 
+## Pedir datos por correo
+
+`enviar_correos.py` manda un correo individual a cada estudiante a partir de una plantilla de `plantillas/`. `pedir_usuario_github.txt` pide el usuario de GitHub. Para pedir otra cosa, copia esa plantilla y cambia el texto: la primera línea es el asunto, `{nombre}` es el primer nombre del estudiante, y cualquier columna del CSV o `--var clave=valor` se usa como `{clave}`.
+
+El CSV puede ser la exportación del formulario de inscripción: guárdala en `herramientas/` (por ejemplo `herramientas/inscripcion.csv`, que no se sube porque todos los `.csv` de esta carpeta, salvo los de ejemplo, están en `.gitignore`). Las columnas de correo y nombre se detectan solas; si no, usa `--columna-correo` y `--columna-nombre`.
+
+```bash
+python herramientas/enviar_correos.py herramientas/inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt --var fecha_limite="2 de octubre"
+```
+
+Eso es una **vista previa**: muestra un correo de ejemplo y la lista de destinatarios, sin enviar nada. Para enviar, agrega `--enviar` (pide confirmación). Cada envío queda en `correos_enviados.csv`: si algo falla a mitad de camino, volver a ejecutar manda solo los que faltan.
+
+**Cuenta que envía.** El correo de IMPA usa Google Workspace, así que el servidor por defecto es `smtp.gmail.com`. Gmail no acepta tu contraseña normal: necesitas una *contraseña de aplicación*.
+1. Activa la verificación en dos pasos de la cuenta.
+2. Crea la contraseña en [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords). Si esa página no existe para tu cuenta de IMPA, el administrador desactivó las contraseñas de aplicación: usa una cuenta personal de Gmail.
+
+Una cuenta de Hotmail/Outlook probablemente no sirva, porque Microsoft ya no acepta contraseñas para enviar por SMTP desde cuentas personales.
+
+```bash
+export SMTP_USUARIO=melvin.poveda@impa.br
+# SMTP_CLAVE es opcional: si no está, el script pide la contraseña de aplicación al enviar
+```
+
+Con las respuestas, completa `estudiantes.csv` (`usuario,nombre,nivel`) y sigue con la sección siguiente.
+
 ## Crear los repositorios
 
 ```bash
