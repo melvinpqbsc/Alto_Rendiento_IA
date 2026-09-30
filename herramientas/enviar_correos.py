@@ -1,7 +1,8 @@
 """Envía un correo individual a cada estudiante a partir de una plantilla.
 
     python herramientas/enviar_correos.py inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt \\
-        --var fecha_limite="2 de octubre" --var formulario=https://forms.gle/...   # vista previa
+        --var fecha_limite="2 de octubre" \
+        --var formulario_github=https://forms.gle/... --var formulario_horarios=https://forms.gle/...   # vista previa
     python herramientas/enviar_correos.py ... --enviar    # envía (pide confirmación)
 
 El CSV puede ser la exportación del formulario de inscripción: las columnas de

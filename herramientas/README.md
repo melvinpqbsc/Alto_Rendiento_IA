@@ -16,13 +16,14 @@ Cada estudiante tiene un repositorio **privado** de entregas en la organización
 
 ## Pedir datos por correo
 
-`enviar_correos.py` manda un correo individual a cada estudiante a partir de una plantilla de `plantillas/`. `pedir_usuario_github.txt` avisa que el curso empieza, pide el usuario de GitHub (por respuesta al correo) y los días disponibles (por un formulario, cuyo enlace se pasa con `--var formulario=...`). Para pedir otra cosa, copia esa plantilla y cambia el texto: la primera línea es el asunto, `{nombre}` es el primer nombre del estudiante, y cualquier columna del CSV o `--var clave=valor` se usa como `{clave}`.
+`enviar_correos.py` manda un correo individual a cada estudiante a partir de una plantilla de `plantillas/`. `pedir_usuario_github.txt` avisa que el curso empieza, pide el usuario de GitHub y los días disponibles, cada uno en su propio formulario. Los enlaces se pasan con `--var formulario_github=...` y `--var formulario_horarios=...`. Para pedir otra cosa, copia esa plantilla y cambia el texto: la primera línea es el asunto, `{nombre}` es el primer nombre del estudiante, y cualquier columna del CSV o `--var clave=valor` se usa como `{clave}`.
 
 El CSV puede ser la exportación del formulario de inscripción: guárdala en `herramientas/` (por ejemplo `herramientas/inscripcion.csv`, que no se sube porque todos los `.csv` de esta carpeta, salvo los de ejemplo, están en `.gitignore`). Las columnas de correo y nombre se detectan solas; si no, usa `--columna-correo` y `--columna-nombre`.
 
 ```bash
 python herramientas/enviar_correos.py herramientas/inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt \
-    --var fecha_limite="2 de octubre" --var formulario=https://forms.gle/...
+    --var fecha_limite="2 de octubre" \
+    --var formulario_github=https://forms.gle/... --var formulario_horarios=https://forms.gle/...
 ```
 
 Eso es una **vista previa**: muestra un correo de ejemplo y la lista de destinatarios, sin enviar nada. Para enviar, agrega `--enviar` (pide confirmación). Cada envío queda en `correos_enviados.csv`: si algo falla a mitad de camino, volver a ejecutar manda solo los que faltan.
@@ -38,7 +39,7 @@ export SMTP_USUARIO=tu.cuenta@gmail.com
 # SMTP_CLAVE es opcional: si no está, el script pide la contraseña de aplicación al enviar
 ```
 
-Con las respuestas, completa `estudiantes.csv` (`usuario,nombre,nivel`) y sigue con la sección siguiente.
+Con las respuestas del formulario de GitHub, completa `estudiantes.csv` (`usuario,nombre,nivel`) y sigue con la sección siguiente.
 
 ## Crear los repositorios
 

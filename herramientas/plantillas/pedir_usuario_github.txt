@@ -6,10 +6,11 @@ Hola, {nombre}:
 
 1. Tu usuario de GitHub. Durante el curso vas a entregar tus trabajos en un repositorio privado de GitHub que voy a crear para ti.
    - Si todavía no tienes cuenta, créala en https://github.com/signup (es gratis). Elige un nombre de usuario serio, que puedas mostrar.
-   - Responde a este correo solo con tu nombre de usuario (por ejemplo: ana-perez). Es el que aparece en la dirección github.com/<usuario>, no tu correo.
+   - Escribe tu nombre de usuario en este formulario: {formulario_github}
+     Es el que aparece en la dirección github.com/<usuario> (por ejemplo: ana-perez), no tu correo.
    Poco después te llegará una invitación a tu repositorio de entregas, Alto-Rendimiento-IA/entregas-<tu-usuario>: acéptala antes de 7 días, porque después caduca.
 
-2. Los días y horarios en que puedes asistir a clase. Complétalo en este formulario (toma un minuto): {formulario}
+2. Los días y horarios en que puedes asistir a clase. Complétalo en este otro formulario (toma un minuto): {formulario_horarios}
    Con las respuestas de todos elijo el día y el horario de las clases, y te aviso por este medio.
 
 Las instrucciones completas del curso están en https://github.com/melvinpqbsc/Alto_Rendiento_IA
