@@ -16,24 +16,25 @@ Cada estudiante tiene un repositorio **privado** de entregas en la organización
 
 ## Pedir datos por correo
 
-`enviar_correos.py` manda un correo individual a cada estudiante a partir de una plantilla de `plantillas/`. `pedir_usuario_github.txt` pide el usuario de GitHub. Para pedir otra cosa, copia esa plantilla y cambia el texto: la primera línea es el asunto, `{nombre}` es el primer nombre del estudiante, y cualquier columna del CSV o `--var clave=valor` se usa como `{clave}`.
+`enviar_correos.py` manda un correo individual a cada estudiante a partir de una plantilla de `plantillas/`. `pedir_usuario_github.txt` avisa que el curso empieza, pide el usuario de GitHub (por respuesta al correo) y los días disponibles (por un formulario, cuyo enlace se pasa con `--var formulario=...`). Para pedir otra cosa, copia esa plantilla y cambia el texto: la primera línea es el asunto, `{nombre}` es el primer nombre del estudiante, y cualquier columna del CSV o `--var clave=valor` se usa como `{clave}`.
 
 El CSV puede ser la exportación del formulario de inscripción: guárdala en `herramientas/` (por ejemplo `herramientas/inscripcion.csv`, que no se sube porque todos los `.csv` de esta carpeta, salvo los de ejemplo, están en `.gitignore`). Las columnas de correo y nombre se detectan solas; si no, usa `--columna-correo` y `--columna-nombre`.
 
 ```bash
-python herramientas/enviar_correos.py herramientas/inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt --var fecha_limite="2 de octubre"
+python herramientas/enviar_correos.py herramientas/inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt \
+    --var fecha_limite="2 de octubre" --var formulario=https://forms.gle/...
 ```
 
 Eso es una **vista previa**: muestra un correo de ejemplo y la lista de destinatarios, sin enviar nada. Para enviar, agrega `--enviar` (pide confirmación). Cada envío queda en `correos_enviados.csv`: si algo falla a mitad de camino, volver a ejecutar manda solo los que faltan.
 
-**Cuenta que envía.** El correo de IMPA usa Google Workspace, así que el servidor por defecto es `smtp.gmail.com`. Gmail no acepta tu contraseña normal: necesitas una *contraseña de aplicación*.
-1. Activa la verificación en dos pasos de la cuenta.
-2. Crea la contraseña en [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords). Si esa página no existe para tu cuenta de IMPA, el administrador desactivó las contraseñas de aplicación: usa una cuenta personal de Gmail.
+**Cuenta que envía: una cuenta de Gmail.** Gmail no acepta tu contraseña normal para enviar desde un script: necesitas una *contraseña de aplicación*.
+1. Activa la [verificación en dos pasos](https://myaccount.google.com/signinoptions/two-step-verification) de la cuenta.
+2. Crea la contraseña en [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) (16 letras). Guárdala fuera del repositorio.
 
 Una cuenta de Hotmail/Outlook probablemente no sirva, porque Microsoft ya no acepta contraseñas para enviar por SMTP desde cuentas personales.
 
 ```bash
-export SMTP_USUARIO=melvin.poveda@impa.br
+export SMTP_USUARIO=tu.cuenta@gmail.com
 # SMTP_CLAVE es opcional: si no está, el script pide la contraseña de aplicación al enviar
 ```
 

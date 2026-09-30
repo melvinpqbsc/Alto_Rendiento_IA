@@ -1,7 +1,7 @@
 """Envía un correo individual a cada estudiante a partir de una plantilla.
 
     python herramientas/enviar_correos.py inscripcion.csv herramientas/plantillas/pedir_usuario_github.txt \\
-        --var fecha_limite="2 de octubre"                 # vista previa: no envía nada
+        --var fecha_limite="2 de octubre" --var formulario=https://forms.gle/...   # vista previa
     python herramientas/enviar_correos.py ... --enviar    # envía (pide confirmación)
 
 El CSV puede ser la exportación del formulario de inscripción: las columnas de
@@ -16,10 +16,10 @@ Cada correo enviado queda en herramientas/correos_enviados.csv: si el envío se 
 volver a ejecutar solo manda los que faltan (--reenviar para mandar todos otra vez).
 
 Configuración del servidor (variables de entorno):
-    SMTP_USUARIO   cuenta que envía, p. ej. melvin.poveda@impa.br (obligatoria)
+    SMTP_USUARIO   cuenta de Gmail que envía, p. ej. curso.ia@gmail.com (obligatoria)
     SMTP_CLAVE     contraseña de aplicación; si falta, se pide al enviar
     SMTP_NOMBRE    nombre del remitente (por defecto, "Melvin Poveda")
-    SMTP_SERVIDOR  por defecto smtp.gmail.com (IMPA usa Google Workspace)
+    SMTP_SERVIDOR  por defecto smtp.gmail.com
     SMTP_PUERTO    por defecto 587
 """
 

@@ -1,15 +1,18 @@
-Asunto: Curso de IA: necesito tu usuario de GitHub
+Asunto: El curso de IA empieza pronto: dos cosas que necesito de ti
 
 Hola, {nombre}:
 
-Durante el curso vas a entregar tus trabajos en un repositorio privado de GitHub que voy a crear para ti. Para eso necesito tu nombre de usuario de GitHub.
+¡Gracias por inscribirte! El Programa de Alto Rendimiento en IA empieza la semana del 5 de octubre. Antes de la primera clase necesito dos cosas de ti, antes del {fecha_limite}:
 
-1. Si todavía no tienes cuenta, créala en https://github.com/signup (es gratis). Elige un nombre de usuario que puedas mostrar: lo verán tus compañeros y el profesor.
-2. Responde a este correo solo con tu nombre de usuario (por ejemplo: ana-perez). Es el que aparece en la dirección github.com/<usuario>, no tu correo.
+1. Tu usuario de GitHub. Durante el curso vas a entregar tus trabajos en un repositorio privado de GitHub que voy a crear para ti.
+   - Si todavía no tienes cuenta, créala en https://github.com/signup (es gratis). Elige un nombre de usuario serio, que puedas mostrar.
+   - Responde a este correo solo con tu nombre de usuario (por ejemplo: ana-perez). Es el que aparece en la dirección github.com/<usuario>, no tu correo.
+   Poco después te llegará una invitación a tu repositorio de entregas, Alto-Rendimiento-IA/entregas-<tu-usuario>: acéptala antes de 7 días, porque después caduca.
 
-Por favor, responde antes del {fecha_limite}. Poco después te llegará una invitación a tu repositorio de entregas, Alto-Rendimiento-IA/entregas-<tu-usuario>: acéptala antes de 7 días, porque después caduca.
+2. Los días y horarios en que puedes asistir a clase. Complétalo en este formulario (toma un minuto): {formulario}
+   Con las respuestas de todos elijo el día y el horario de las clases, y te aviso por este medio.
 
-Las instrucciones completas están en https://github.com/melvinpqbsc/Alto_Rendiento_IA#antes-de-empezar-github
+Las instrucciones completas del curso están en https://github.com/melvinpqbsc/Alto_Rendiento_IA
 
-Saludos,
+¡Nos vemos pronto!
 Melvin Poveda
