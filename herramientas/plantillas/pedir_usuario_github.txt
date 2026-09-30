@@ -10,10 +10,10 @@ Hola, {nombre}:
      Es el que aparece en la dirección github.com/<usuario> (por ejemplo: ana-perez), no tu correo.
    Poco después te llegará una invitación a tu repositorio de entregas, Alto-Rendimiento-IA/entregas-<tu-usuario>: acéptala antes de 7 días, porque después caduca.
 
-2. Los días y horarios en que puedes asistir a clase. Complétalo en este otro formulario (toma un minuto): {formulario_horarios}
+2. Los días y horarios en que puedes asistir a clase. Complétalo en este otro formulario (toma un minuto) escogiendo todos los horarios libres en cuales puedas participar: {formulario_horarios}
    Con las respuestas de todos elijo el día y el horario de las clases, y te aviso por este medio.
 
-Las instrucciones completas del curso están en https://github.com/melvinpqbsc/Alto_Rendiento_IA
+Las instrucciones completas del curso están en https://github.com/melvinpqbsc/Alto_Rendiento_IA, cualquier pregunta que puedas tener, no dudes en preguntarme por este medio o por whastapp a mi número +5521969231922
 
 ¡Nos vemos pronto!
 Melvin Poveda
